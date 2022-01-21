@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="VBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="483.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.geekbrains.cloud.client.ClientController">
+    <ListView fx:id="listView" />
+    <HBox> <ListView fx:id="selectedFile" HBox.hgrow="ALWAYS" maxWidth="Infinity" /> </HBox>
+    <HBox VBox.vgrow="ALWAYS" >
+    <Button fx:id="sendBtn" onAction="#sendFiles" text="Send" HBox.hgrow="ALWAYS" maxWidth="Infinity" >
+         <padding> <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /> </padding>
+    </Button>
+    <Button fx:id="downloadBtn" onAction="#downloadFiles" text="Download" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+        <padding> <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /> </padding>
+    </Button>
+        <Button fx:id="chooseBtn" onAction="#chooseFiles" text="Choose" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <padding> <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /> </padding>
+        </Button>
+    <Button fx:id="exitBtn" onAction="#exitProgramme" text="Exit" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+        <padding> <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /> </padding>
+    </Button>
+    </HBox>
+    <TextField fx:id="textField" editable="false" onAction="#sendMessages" prefHeight="96.0" prefWidth="349.0" />
+
+</VBox>
